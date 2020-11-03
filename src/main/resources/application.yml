@@ -1,2 +1,16 @@
+# 服务配置
 server:
-  port: 8090
+  port: 8090 # 服务端口
+  servlet:
+    jsp:
+      init-parameters:
+        development: true # 开启JSP调试模式，修改JSP无需重启
+    #context-path: /ddd # 上下文路径
+
+# Spring MVC 配置
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/page/ # 页面前缀
+      suffix: .jsp # 页面后缀
+    static-path-pattern: /static/**
